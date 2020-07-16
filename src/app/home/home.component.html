@@ -1,0 +1,25 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You are using the angular app created by satweek</p>
+<h3>All registered users:</h3>
+
+
+<div class="row-md-3">
+<div class="col-sm-6">
+<div class="card text-white bg-dark mb-3" style="max-width: 25rem;" *ngFor="let user of users">
+
+<h3 class = "card-title">{{user.username}}</h3>
+
+   
+   <p>
+         user details are as follows <br>
+         {{user.firstName}} {{user.lastName}}
+         <br>
+         {{user.address}}
+         <br>
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </p>
+
+</div>
+</div>
+</div>
+
